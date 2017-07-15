@@ -1,0 +1,2 @@
+[25-Jan-2017 22:07:20 UTC] PHP Fatal error:  Call to undefined function get_site_url() in /home/codesapiens/public_html/projects/datasys/wp-content/themes/datasys_theme/index.php on line 1
+[25-Jan-2017 22:07:57 UTC] PHP Fatal error:  Call to undefined function get_site_url() in /home/codesapiens/public_html/projects/datasys/wp-content/themes/datasys_theme/index.php on line 1

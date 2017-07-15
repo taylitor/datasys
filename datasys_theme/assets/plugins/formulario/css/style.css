@@ -1,0 +1,416 @@
+.container-form {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    border-radius: 1px;
+}
+.container-form form{
+    padding: 5px 40px 0;
+}
+
+.container-form input,
+.container-form select,
+.container-form textarea {
+    font-family: 'Istok';
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.container-form input::after,
+.container-form input::before,
+.container-form select::after,
+.container-form select::before,
+.container-form textarea::after,
+.container-form textarea::before {
+    box-sizing: border-box;
+}
+
+.container-form h1 {
+    font-size: 32px;
+    text-align: center;
+    margin: 0 0 2em;
+}
+
+.button-container {
+    margin-left: -40px;
+    margin-right: -40px;
+    text-align: center;
+}
+
+.form-radio-mdb,
+.form-group-mdb {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.form-radio-mdb br,
+.form-group-mdb br{
+    display: none;
+}
+
+.form-inline > .form-group-mdb,
+.form-inline > .btn {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.form-help {
+    margin-top: 2px;
+    margin-left: 2px;
+    color: #b3b3b3;
+    font-size: 12.8px;
+}
+.checkbox .form-help, .form-radio-mdb .form-help, .form-group-mdb .form-help {
+    position: absolute;
+    width: 100%;
+}
+.checkbox .form-help {
+    position: relative;
+    margin-bottom: 16px;
+}
+.form-radio-mdb .form-help {
+    padding-top: 4px;
+    margin-top: -16px;
+}
+
+.form-group-mdb input {
+    height: 30.4px;
+}
+.form-group-mdb textarea {
+    resize: none;
+}
+.form-group-mdb select {
+    width: 100%;
+    font-size: 16px;
+    height: 25.6px;
+    padding: 2px 2px 1px;
+    background: none;
+    border: none;
+    line-height: 1.6;
+    box-shadow: none;
+}
+.form-group-mdb .control-label {
+    position: absolute;
+    top: 4px;
+    pointer-events: none;
+    padding-left: 2px;
+    z-index: 1;
+    color: #b3b3b3;
+    font-size: 16px;
+    font-family: 'Istok';
+    font-weight: bold;
+    -webkit-transition: all 0.28s ease;
+    transition: all 0.28s ease;
+}
+.form-group-mdb .bar {
+    position: relative;
+    border-bottom: 2px solid #c3c3c3;
+    display: block;
+}
+.form-group-mdb .bar::before {
+    content: '';
+    height: 3px;
+    width: 0;
+    left: 50%;
+    bottom: -2px;
+    position: absolute;
+    background: #ed2324;
+    -webkit-transition: left 0.28s ease, width 0.28s ease;
+    transition: left 0.28s ease, width 0.28s ease;
+    z-index: 2;
+}
+.form-group-mdb input,
+.form-group-mdb textarea {
+    display: block;
+    background: none;
+    font-family: 'Istok';
+    font-weight: bold;
+    padding: 2px 2px 1px;
+    font-size: 16px;
+    border-width: 0;
+    border-color: transparent;
+    line-height: 1.9;
+    width: 100%;
+    color: transparent;
+    -webkit-transition: all 0.28s ease;
+    transition: all 0.28s ease;
+    box-shadow: none;
+}
+.form-group-mdb input[type="file"] {
+    line-height: 1;
+}
+.form-group-mdb input[type="file"] ~ .bar {
+    display: none;
+}
+.form-group-mdb select,
+.form-group-mdb input:focus,
+.form-group-mdb input:valid,
+.form-group-mdb input.form-file,
+.form-group-mdb input.has-value,
+.form-group-mdb textarea:focus,
+.form-group-mdb textarea:valid,
+.form-group-mdb textarea.form-file,
+.form-group-mdb textarea.has-value {
+    color: #c3c3c3;
+}
+.form-group-mdb select ~ .control-label,
+.form-group-mdb input:focus ~ .control-label,
+.form-group-mdb input:valid ~ .control-label,
+.form-group-mdb input.form-file ~ .control-label,
+.form-group-mdb input.has-value ~ .control-label,
+.form-group-mdb textarea:focus ~ .control-label,
+.form-group-mdb textarea:valid ~ .control-label,
+.form-group-mdb textarea.form-file ~ .control-label,
+.form-group-mdb textarea.has-value ~ .control-label {
+    font-size: 12.8px;
+    color: gray;
+    top: -16px;
+    left: 0;
+}
+.form-group-mdb select:focus,
+.form-group-mdb input:focus,
+.form-group-mdb textarea:focus {
+    outline: none;
+}
+.form-group-mdb select:focus ~ .control-label,
+.form-group-mdb input:focus ~ .control-label,
+.form-group-mdb textarea:focus ~ .control-label {
+    color: #ed2324;
+}
+.form-group-mdb select:focus ~ .bar::before,
+.form-group-mdb input:focus ~ .bar::before,
+.form-group-mdb textarea:focus ~ .bar::before {
+    width: 100%;
+    left: 0;
+}
+
+.checkbox label,
+.form-radio-mdb label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 32px;
+    text-align: left;
+    color: #c3c3c3;
+    display: block;
+    font-family: 'Istok';
+    font-weight: bold;
+}
+.checkbox input,
+.form-radio-mdb input {
+    width: auto;
+    opacity: 0.00000001;
+    position: absolute;
+    left: 0;
+}
+
+.radio {
+    margin-bottom: 16px;
+}
+.radio .helper {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #999;
+}
+.radio .helper::before, .radio .helper::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 16px;
+    height: 16px;
+    -webkit-transition: -webkit-transform 0.28s ease;
+    transition: -webkit-transform 0.28s ease;
+    transition: transform 0.28s ease;
+    transition: transform 0.28s ease, -webkit-transform 0.28s ease;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+}
+.radio .helper::after {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    background-color: #ed2324;
+    border-color: #ed2324;
+}
+.radio label:hover .helper {
+    color: #ed2324;
+}
+.radio input:checked ~ .helper::after {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+}
+.radio input:checked ~ .helper::before {
+    color: #ed2324;
+}
+
+.checkbox {
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+.checkbox .helper {
+    color: #999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    z-index: 0;
+    border: 2px solid currentColor;
+    border-radius: 1px;
+    -webkit-transition: border-color 0.28s ease;
+    transition: border-color 0.28s ease;
+}
+.checkbox .helper::before, .checkbox .helper::after {
+    position: absolute;
+    height: 0;
+    width: 3.2px;
+    background-color: #ed2324;
+    display: block;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-radius: 4px;
+    content: '';
+    -webkit-transition: opacity 0.28s ease, height 0s linear 0.28s;
+    transition: opacity 0.28s ease, height 0s linear 0.28s;
+    opacity: 0;
+}
+.checkbox .helper::before {
+    top: 10.4px;
+    left: 6.08px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    box-shadow: 0 0 0 1px #fff;
+}
+.checkbox .helper::after {
+    top: 4.8px;
+    left: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.checkbox label:hover .helper {
+    color: #ed2324;
+}
+.checkbox input:checked ~ .helper {
+    color: #ed2324;
+}
+.checkbox input:checked ~ .helper::after, .checkbox input:checked ~ .helper::before {
+    opacity: 1;
+    -webkit-transition: height 0.28s ease;
+    transition: height 0.28s ease;
+}
+.checkbox input:checked ~ .helper::after {
+    height: 8px;
+}
+.checkbox input:checked ~ .helper::before {
+    height: 19.2px;
+    -webkit-transition-delay: 0.28s;
+    transition-delay: 0.28s;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+    margin-top: 16px;
+}
+
+.has-error .legend.legend, .has-error.form-group-mdb .control-label.control-label {
+    color: #d9534f;
+}
+.has-error.form-group-mdb .form-help,
+.has-error.form-group-mdb .helper, .has-error.checkbox .form-help,
+.has-error.checkbox .helper, .has-error.radio .form-help,
+.has-error.radio .helper, .has-error.form-radio-mdb .form-help,
+.has-error.form-radio-mdb .helper {
+    color: #d9534f;
+}
+.has-error .bar::before {
+    background: #d9534f;
+    left: 0;
+    width: 100%;
+}
+
+.button {
+    position: relative;
+    background: currentColor;
+    border: 1px solid currentColor;
+    font-size: 25px;
+    color: #ed2324;
+    /*margin: 48px 0;*/
+    padding: 20px 48px;
+    width: 100%;
+    cursor: pointer;
+    -webkit-transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+    transition: background-color 0.28s ease, color 0.28s ease, box-shadow 0.28s ease;
+    overflow: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.button span {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.button::before {
+    content: '';
+    position: absolute;
+    background: rgba(255,255,255, .1);
+    border: 50vh solid rgba(255,255,255, .1);
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    display: block;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+}
+.button:hover {
+    color: #ed2324;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+}
+.button:active::before, .button:focus::before {
+    -webkit-transition: opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+    transition: opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+    transition: transform 1.12s ease, opacity 0.28s ease 0.364s;
+    transition: transform 1.12s ease, opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+.button:focus {
+    outline: none;
+}
+.screen-reader-response{
+    display: none;
+}
+.wpcf7-response-output.wpcf7-validation-errors {
+    color: #D8000C;
+    background-color: transparent;
+    border: 0;
+    padding: 10px;
+}
+.wpcf7-response-output.wpcf7-mail-sent-ok {
+    color: #4F8A10;
+    background-color: transparent;
+    border: 0;
+    padding: 10px;
+}
+div.wpcf7-mail-sent-ok:before,div.wpcf7-validation-errors:before {
+    font: 26px/30px fontawesome;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+div.wpcf7-mail-sent-ok:before {
+    content: "\f118";
+}
+div.wpcf7-validation-errors:before {
+    content: "\f119";
+}
