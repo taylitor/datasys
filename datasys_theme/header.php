@@ -32,6 +32,8 @@
         <meta name="msapplication-square310x310logo" content="<?php echo get_template_directory_uri() ?>/assets/img/favicon/mstile-310x310.png" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+        <script type='text/javascript' src='<?php plugins_url(); ?>/carousel-slider/assets/js/owl.carousel.min.js?ver=2.2.0'></script>
+        <link rel='stylesheet' id='carousel-slider-css'  href='<?php plugins_url(); ?>/carousel-slider/assets/css/style.css?ver=1.6.3' type='text/css' media='all' />
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <!-- Optional theme -->
@@ -45,7 +47,6 @@
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/plugins/manparallax/css/style.css"/>
         <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
         <script src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.scrollme.js"/></script>
-
         <!--<link rel="stylesheet" type="text/css" href="assets/plugins/particles/css/style_particles.css"/>-->
 
         <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/plugins/owl-carousel/assets/owl.carousel.css">
@@ -56,12 +57,45 @@
         <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        
-        <script src="<?php echo get_template_directory_uri() ?>/assets/plugins/manparallax/js/particles.min.js"></script>
+        <script type="text/javascript">
+                    jQuery(document).ready(function ($) {
+                        if (jQuery().owlCarousel) {
+                            $('body').find('.carousel-slider').each(function () {
+                                var _this = $(this);
+                                var isVideo = _this.data('slide-type') == 'video-carousel' ? true : false;
+                                var videoWidth = isVideo ? _this.data('video-width') : false;
+                                var videoHeight = isVideo ? _this.data('video-height') : false;
+                                var autoWidth = isVideo ? true : false;
+                                _this.owlCarousel({
+                                    nav: false,
+                                    margin: _this.data('margin'),
+                                    loop: _this.data('loop'),
+                                    autoplay: _this.data('autoplay'),
+                                    autoplayTimeout: _this.data('autoplay-timeout'),
+                                    autoplaySpeed: _this.data('autoplay-speed'),
+                                    autoplayHoverPause: _this.data('autoplay-hover-pause'),
+                                    slideBy: _this.data('slide-by'),
+                                    lazyLoad: _this.data('lazy-load'),
+                                    video: isVideo,
+                                    videoWidth: videoWidth,
+                                    videoHeight: videoHeight,
+                                    autoWidth: autoWidth,
+                                    responsive: {
+                                        320: {items: _this.data('colums-mobile')},
+                                        600: {items: _this.data('colums-small-tablet')},
+                                        768: {items: _this.data('colums-tablet')},
+                                        993: {items: _this.data('colums-small-desktop')},
+                                        1200: {items: _this.data('colums-desktop')},
+                                        1921: {items: _this.data('colums')}
+                                    }
+                                });
+                            });
+                        }
+                    });
+                </script>
     </head>
-    <body class="bg-gray-1">
-        <div class="col-xs-12 Pad0">
-            <!-- Top Navigation -->
+
+    <body class="bg-gray-1" >    
 <?php  
 $args = array(
 'post_type' => 'menu',
@@ -76,92 +110,86 @@ $query->the_post();
 $i++;
 
 ?>             
-            <div id="header_menu" class="cd-auto-hide-header collapsed">
-                <nav class="navbar navbar-autocollapse navbar-inverse navbar-static-top collapsed">
-                    <div class="col-xs-12">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand logo" href="index.html"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo2.png" alt="Datasys">
-                            </a>
-                        </div>
-        <div id="navbar3" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo get_site_url(); ?>"><?php echo the_field('inicio') ?></a></li>
-                <script type="text/javascript">
-                var wid = $(window).width();  
-                console.log(wid);                  
-                if (wid < "1024") {
-                document.getElementById("nosotros").innerHTML = "<a href='http://code-sapiens.com/projects/datasys/nosotros/valores' id='nosotros'>Nosotros</span></a>";
-                }else{
-                document.getElementById("nosotros").innerHTML = "<a href='#' id='nosotros'>Nosotros</span></a>";
-                }
-                </script>                
-                <li id="nosotros">
-                    <a href="#" id="nosotros">Nosotros</span></a>
-                    
-                </li>
-                <li id="soluciones">
-                    <a href="#" >Portafolio</span></a>
- 
-                </li>
-                <li id="servicios">
-                    <a href="#" >
-                        Servicios administrativos</span>
-                    </a>
 
-                </li>
-                <li><a href="<?php echo the_field('blog_link') ?>"><?php echo the_field('blog') ?></a></li>
-                <li><a href="<?php echo the_field('contacto_link') ?>"><?php echo the_field('contacto') ?></a></li>
-                <li><a href="<?php echo the_field('facebook_link') ?>" target="_blank" ><i class="fa fa-fw fa-facebook"></i></a></li>
-                <li><a href="<?php echo the_field('linkedin_link') ?>" target="_blank" ><i class="fa fa-fw fa-linkedin"></i></a></li>
-            </ul>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png" alt="Datasys" class="img-responsive" id="logoMain" ></a>
         </div>
-                        <!--/.nav-collapse -->
-                    </div>
-                    <!--/.container-fluid -->
-                </nav>
-            </div>
-            <div class="col-xs-12 Pad0 bg-blue menu-stripe" style="border-bottom: 1px solid #686a76;">
-            </div>
-            <div class="col-xs-12 Pad0 bg-blue menu-stripe2 secondmenu" id="submenuNosotros" >
-            <ul style="width: 950px;">
-                        <li><a href="<?php echo the_field('valores_link') ?>"><?php echo the_field('valores') ?></a></li>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav istok">
+           <li class="firstLi"> <a href="<?php echo get_site_url(); ?>"> <?php echo the_field( 'inicio') ?> </a> </li>
+            
+            <li class="dropdown ">
+              <a href="<?php echo the_field('valores_link') ?>" class="dropdown-toggle" data-toggle="dropdown">Nosotros</a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="firstLiSubmenu"><a href="<?php echo the_field('valores_link') ?>"><?php echo the_field('valores') ?></a></li>
                         <li><a href="<?php echo the_field('quienes_somos_link') ?>"><?php echo the_field('quienes_somos') ?></a></li>
                         <li><a href="<?php echo the_field('certificaciones_link') ?>"><?php echo the_field('certificaciones') ?></a></li>
                         <li><a href="<?php echo the_field('proximas_certificaciones_link') ?>"><?php echo the_field('proximas_certificaciones') ?></a></li>
                         <li><a href="<?php echo the_field('marca_pais_link') ?>"><?php echo the_field('marca_pais') ?></a></li>
                         <li><a href="<?php echo the_field('politica_de_calidad_link') ?>"><?php echo the_field('politica_de_calidad') ?></a></li>
-                        <li><a href="<?php echo the_field('objetivos_de_calidad_link') ?>"><?php echo the_field('objetivos_de_calidad') ?></a>
-            </ul>
-            </div>
-            <div class="col-xs-12 Pad0 bg-blue menu-stripe2 secondmenu" id="submenuSoluciones" >
-            <ul style="width: 850px;">
-                        <li><a href="<?php echo the_field('datacenters_link') ?>"><?php echo the_field('datacenters') ?></a></li>
-                        <li><a href="<?php echo the_field('comunicaciones_link') ?>"><?php echo the_field('comunicaciones') ?></a></li>
+                        <li><a href="<?php echo the_field('objetivos_de_calidad_link') ?>"><?php echo the_field('objetivos_de_calidad') ?></a></li>
+             </ul>
+             </li>
+             
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portafolio</a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="firstLiSubmenu"><a href="<?php echo the_field('datacenters_link') ?>"><?php echo the_field('datacenters') ?></a></li>
+                        <li ><a href="<?php echo the_field('comunicaciones_link') ?>"><?php echo the_field('comunicaciones') ?></a></li>
                         <li><a href="<?php echo the_field('redes_y_seguridad_link') ?>"><?php echo the_field('redes_y_seguridad') ?></a></li>
                         <li><a href="<?php echo the_field('infraestructura_link') ?>"><?php echo the_field('infraestructura') ?></a></li>
                         <li><a href="<?php echo the_field('soluciones_de_servicios_link') ?>"><?php echo the_field('soluciones_de_servicios') ?></a></li>
                         <li><a href="<?php echo the_field('ciudad_inteligente_link') ?>"><?php echo the_field('ciudad_inteligente') ?></a></li>
-            </ul>
-            </div>
-            <div class="col-xs-12 Pad0 bg-blue menu-stripe2 secondmenu" id="submenuServicios" >
-            <ul style="width: 480px;">
-                        <li><a href="<?php echo the_field('itaas_link') ?>"><?php echo the_field('itaas') ?></a></li>
+             </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios administrativos</a>
+              <ul class="dropdown-menu" role="menu">
+                  <li class="firstLiSubmenusServ"><a href="<?php echo the_field('datacenters_link') ?>"><?php echo the_field('datacenters') ?></a></li>
+                         <li><a href="<?php echo the_field('itaas_link') ?>"><?php echo the_field('itaas') ?></a></li>
                         <li><a href="<?php echo the_field('iaas_link') ?>"><?php echo the_field('iaas') ?></a></li>
                         <li><a href="<?php echo the_field('nocaas_link') ?>"><?php echo the_field('nocaas') ?></a></li>
                         <li><a href="<?php echo the_field('vdlaas_link') ?>"><?php echo the_field('vdlaas') ?></a></li>
                         <li><a href="<?php echo the_field('cctvaas_link') ?>"><?php echo the_field('cctvaas') ?></a></li>
                         <li><a href="<?php echo the_field('pbxaas_link') ?>"><?php echo the_field('pbxaas') ?></a></li>
-            </ul>
-            </div>
+             </ul>
+            </li>
+            <li> <a href="<?php echo the_field('blog_link') ?>"> <?php echo the_field( 'blog') ?></a> </li>
+            <li><a href="<?php echo the_field('contacto_link') ?>"><?php echo the_field( 'contacto') ?></a></li>
+
+         </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm iconsright">
+        <li ><a href="<?php echo the_field('facebook_link') ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/img/fbIcon.png" width="30px"></a>
+                    </li>
+                    <li><a href="<?php echo the_field('linkedin_link') ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/assets/img/inIcon.png" width="30px" class="img img-responsive"></a>
+                    </li>
+                    <li>
+                       <select class="language">
+                          <option value="volvo">ESP</option>
+                          <option value="saab">ENG</option>
+                        </select>
+                    </li>
+      </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  
+
+
 <?php 
 }
 }
 wp_reset_postdata();
-?>            
-            <!-- Top Navigation -->
+?>          
+
+
+            <!-- Top content -->

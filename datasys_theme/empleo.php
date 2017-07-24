@@ -24,11 +24,11 @@
                 </div>
                 <div class="Pad0 col-xs-12 col-sm-6 col-md-5" style="background: #e6e6e6;position: relative;">
                     <div class="Pad0 col-xs-12 item-100vh" style="background: #e6e6e6;position: relative; display: inline-table;">
-                        <div class="col-xs-12 text-center mTop35" style="z-index: 1;">
+                        <div class="col-xs-12 text-center mTop100" style="z-index: 1;">
                             <h1 class="istok-b text-gray-1 let-sp-0" style="font-size: 30px;">Formulario de empleo</h1>
                         </div>
-                        <div class="Pad0 col-xs-12 col-sm-10 col-sm-offset-1 mTop20 bg-white bg-white mBot35" style="z-index: 1;">
-                            <div class="container-form">
+                        <div class="Pad0 col-xs-12 col-sm-10 col-sm-offset-1 mTop20 mBot35" style="z-index: 1;">
+                            <div class="container-form bg-white ">
                             <?php echo do_shortcode('[contact-form-7 id="245" title="Empleo"]'); ?>
                                 <!--<form>
                                     <div class="form-group-mdb">

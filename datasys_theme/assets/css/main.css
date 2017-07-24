@@ -413,6 +413,16 @@ a {
     position: relative;
 }
 
+.TopQuienesSomos{
+    height: 90vh !important;
+}
+.sectionHeight{
+    height: 88vh !important;
+}
+.imgRightHe{
+     height: 88vh;
+}
+
 .vcenter {
     display: inline-block;
     vertical-align: middle;
@@ -573,7 +583,7 @@ a {
         height: 0px;
         width: 100%;
         position: absolute;
-        top: 50px;
+        top: 80px;
         background: #000;
         transition: all .5s ease-in-out;
     }
@@ -1346,6 +1356,12 @@ owl carousel components
     font-size: 18px;
     color: rgb(94, 94, 94);
 }
+.firstLiSubmenu{
+    padding-left: 100px !important;
+}
+.firstLiSubmenusServ{
+    padding-left: 20% !important;
+}
 .services_section .services_item .serv_content{
     font-size: 14px;
     color: rgb(94, 94, 94);
@@ -1421,6 +1437,12 @@ owl carousel components
     display: inline-block; width: 100%; height: 70px; line-height: 50px; text-decoration: none; position: relative;
 }
 @media (max-width: 320px) {
+    .firstLiSubmenu{
+    padding-left: 0 !important;
+}
+.firstLiSubmenusServ{
+    padding-left: 0 !important;
+}
     .auto-height{
         height: calc(100vh - 80px) !important;
         position: relative !important;
@@ -1513,6 +1535,12 @@ owl carousel components
     }
 }
 @media (min-width: 321px) and (max-width: 479px) {
+    .firstLiSubmenu{
+    padding-left: 0px !important;
+}
+.firstLiSubmenusServ{
+    padding-left: 0% !important;
+}
     .auto-height{
         height: calc(100vh - 80px) !important;
         position: relative !important;
@@ -1605,6 +1633,12 @@ owl carousel components
     }
 }
 @media (min-width: 480px) and (max-width: 767px) {
+    .firstLiSubmenu{
+    padding-left: 0px !important;
+}
+.firstLiSubmenusServ{
+    padding-left: 0% !important;
+}
     .auto-height{
         height: calc(100vh - 80px) !important;
         position: relative !important;
@@ -1689,6 +1723,12 @@ owl carousel components
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+    .firstLiSubmenu{
+    padding-left: 00px !important;
+}
+.firstLiSubmenusServ{
+    padding-left: 0% !important;
+}
     .auto-height{
         height: 100% !important;
         position: absolute; !important;
@@ -1749,6 +1789,7 @@ owl carousel components
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+
     .auto-height{
         height: 100% !important;
         position: absolute; !important;
@@ -1884,6 +1925,10 @@ owl carousel components
     background: url(../img/fondo-servicios.jpg)no-repeat center center fixed;
     background-size: cover; 
 }
+.img-fondo-QS {
+    background: url(../img/fondo-servicios-q.jpg)no-repeat center center fixed;
+    background-size: cover; 
+}
 /* Arrow animation */
 /*.scroll-indicator { 
     position: absolute;
@@ -1939,6 +1984,9 @@ owl carousel components
     background: #fff;
 }
 .img-fondo .fade{
+    opacity: 1 !important;
+}
+.img-fondo-QS .fade{
     opacity: 1 !important;
 }
 .growIndex { transition: all .2s ease-in-out; }
