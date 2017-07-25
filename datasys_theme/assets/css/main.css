@@ -1285,6 +1285,30 @@ owl carousel components
 /* -------------------------------- 
 owl carousel components 
 -------------------------------- */
+
+.inputForm{
+    border:0;
+    border-bottom: 2px solid #7a7b86;
+}
+.ButtonEmpleos{
+        background: #ec1c23;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    height: 50px;
+    border: 0;
+}
+.cvUpload {
+    background: #ef684e;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+}
+.clickSelect{
+    display: none !important;
+}
+.grayEmpleo{
+    color:#c3c3c3 !important;}
 .select-wrapper {
     background-color: #cdcdcd;
     border: 1px solid #aaa;

@@ -7,28 +7,27 @@
             <!-- Top content -->
             <div class="Pad0 col-xs-12 row-eq-height" style="position: relative;">
                 <div class="Pad0 col-xs-12 col-sm-6 col-md-7 bg-blue" style="">
-                    <div class="Pad0 col-xs-12 item-100vh auto-height bg-black-after vertical-align parallax" style="position: relative;background: url(assets/img/bg-contacto.png) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-                        <div data-depth="0.6" class="layer">
-                            <div id="particles-js"></div>
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="position: relative;z-index: 1;">
-                            <h1 class="text-left text-white istok-b let-sp-0" style="font-size: 25px;">
+                    <div class="Pad0 col-xs-12 item-100vh auto-height bg-black-after vertical-align parallax" style="">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/empleoLeft.jpg" class="img-responsive">
+                     
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="position: absolute;z-index: 999;">
+                            <h1 class="text-left text-white istok-b let-sp-0" style="font-size: 25px; margin-bottom: 20px !important;">
                                 Empleo
                             </h1>
-                            <h1 class="mTop10 contact-info text-left text-white istok-b let-sp-0" style="">
+                            <h1 class="mTop10 contact-info text-left text-white istok-b let-sp-0" style="font-size: 59px !important; margin-bottom: 20px !important;">
                                 &Uacute;nete a nuestro equipo
                             </h1>
-                            <div class="orange_line text-center mTop10" style="height: 6px; width: 80px; margin-top: 10px;"></div>
+                            <div class="orange_line text-center mTop10" style="height: 6px; width: 80px; margin-top: 10px; background: #faa61a;"></div>
                         </div>
                     </div>
                 </div>
                 <div class="Pad0 col-xs-12 col-sm-6 col-md-5" style="background: #e6e6e6;position: relative;">
                     <div class="Pad0 col-xs-12 item-100vh" style="background: #e6e6e6;position: relative; display: inline-table;">
-                        <div class="col-xs-12 text-center mTop100" style="z-index: 1;">
+                        <div class="col-xs-12 text-center" style="z-index: 1; margin-top: 50px;">
                             <h1 class="istok-b text-gray-1 let-sp-0" style="font-size: 30px;">Formulario de empleo</h1>
                         </div>
                         <div class="Pad0 col-xs-12 col-sm-10 col-sm-offset-1 mTop20 mBot35" style="z-index: 1;">
-                            <div class="container-form bg-white ">
+                            <div class="container-form ">
                             <?php echo do_shortcode('[contact-form-7 id="245" title="Empleo"]'); ?>
                                 <!--<form>
                                     <div class="form-group-mdb">
